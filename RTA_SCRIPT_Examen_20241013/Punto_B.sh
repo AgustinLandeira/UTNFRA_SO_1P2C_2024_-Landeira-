@@ -54,7 +54,6 @@ l
 11
 
 
-
 w
 EOF
 lsblk

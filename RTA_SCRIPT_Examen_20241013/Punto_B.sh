@@ -49,6 +49,12 @@ l
 10
 
 +1G
+n
+l
+11
+
+
+
 w
 EOF
 lsblk
@@ -62,6 +68,7 @@ sudo mkfs.ext4 /dev/sdc7
 sudo mkfs.ext4 /dev/sdc8
 sudo mkfs.ext4 /dev/sdc9
 sudo mkfs.ext4 /dev/sdc10
+sudo mkfs.ext4 /dev/sdc11
 lsblk
 sudo lsblk -f
 
@@ -74,6 +81,7 @@ sudo mount /dev/sdc7 /Examenes-UTN/alumno_2/parcial_3
 sudo mount /dev/sdc8 /Examenes-UTN/alumno_3/parcial_1
 sudo mount /dev/sdc9 /Examenes-UTN/alumno_3/parcial_2
 sudo mount /dev/sdc10 /Examenes-UTN/alumno_3/parcial_3
+sudo mount /dev/sdc11 /Examenes-UTN/profesor/
 
 cat << EOF >> /etc/fstab
 UUID=60a43fdb-d8dc-4e7e-9b13-5a7eb53ade0d /Examenes-UTN/alumno_1/parcial_1 ext4 defaults 0 0
@@ -85,4 +93,5 @@ UUID=de7250b3-665a-4753-b39a-9a954c450517 /Examenes-UTN/alumno_2/parcial_3 ext4 
 UUID=a165ec16-2442-485c-9584-5e8685de24c5 /Examenes-UTN/alumno_3/parcial_1 ext4 defaults 0 0
 UUID=79e3eed2-71c7-4071-84d9-57ccb8f73dce /Examenes-UTN/alumno_3/parcial_2 ext4 defaults 0 0
 UUID=97fad49b-1105-45ab-b31f-157e6fbbf01a /Examenes-UTN/alumno_3/parcial_3 ext4 defaults 0 0
+UUID=5b3b1ad7-2da0-48b9-8ba6-64e3ac1f2c37 /Examenes-UTN/profesor/ ext4 defaults 0 0
 EOF
